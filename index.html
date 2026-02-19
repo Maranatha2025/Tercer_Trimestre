@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola mundo</title>
+    <title>Razonamiento Cuantitativo 1</title>
+    <meta name="description" content="Herramienta educativa para clasificar números en conjuntos (naturales, enteros y racionales) y resolver operaciones artmeticas con explicaiones paso a paso.">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Hola Mundo</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque suscipit quo molestias at, blanditiis explicabo qui! Amet, id eligendi facere eaque modi deserunt dolorum quam? Voluptas consequatur repudiandae eveniet reprehenderit.</p>
-    
-</body>
-</html>
+    <div class="principal">
+        <nav class="opciones-nav" role="tablist">
+            <button class="tab-btn" role="tab">
+                <span class="nav-tab-text">Conjunto de números</span>
+            </button>
+            <button class="tab-btn" role="tab">
+                <span class="nav-tab-text">Operaciones Aritmeticas</span>
+            </button>
+            <button class="tab-btn" role="tab">
+                <span class="nav-tab-text">:D </span>
+            </button>
+        </nav>
+
+        <section id="panel-clasificar" class="tab-panel active">
+            <div class="card">
+                <h2>Clasificador de Conjunto de nÚmeros</h2>
+                <P>Ingresa un número y selecciona un conjunto para verificar si pertenece a él</P>
+            </div>
+            <input type="text" id="numero input">
+
+            <select id="select conjuntos">
+                <option value="naturales">Naturales</option>
+                <option value="enteros">Enteros</option>
+                <option value="racionales">Racionales</option>
+            </select>
+ 
+
+        </section>
+
+        <h1>Hola Mundo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque suscipit quo molestias at, blanditiis explicabo qui! Amet, id eligendi facere eaque modi deserunt dolorum quam? Voluptas consequatur repudiandae eveniet reprehenderit.</p>
+    </div>  
+    </body>
+    </html>
