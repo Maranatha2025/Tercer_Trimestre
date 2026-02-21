@@ -1,53 +1,61 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>   <!-- Indica que el documento está usando HTML5 -->
+<html lang="es">  <!-- Elemento raíz del documento HTML. El atributo lang="es" especifica que el idioma es español -->
+<head>  <!-- Contiene metadatos e información para el navegador -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres en UTF-8 Permite usar tildes, ñ y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Hace que la página sea responsive y que se adapte al ancho del dispositivo -->
     <title>Razonamiento Cuantitativo 1</title>
     <meta name="description" content="Herramienta educativa para clasificar números en conjuntos (naturales, enteros y racionales) y resolver operaciones aritméticas con explicaciones paso a paso.">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Vincula el archivo CSS externo para los estilos -->
+</head>   
+<body> <!-- Contenido visible de la página -->
+    <header>
+        <div class="header">
+            <h1>Herramiena educativa para Razonamiento Cuantitativos</h1> <!-- titulo de la página -->
+            <p>Herramienta educativa para clasificar números en conjuntos (naturales, enteros y racionales) y crear operaciones aritméticas con explicaciones paso a paso.</p>
+        </div>
+    </header>
     <div class="principal">
-
-        <nav class="opciones-nav" role="tablist">
-            <button class="tab-btn" role="tab">
+        <nav class="opciones-nav" role="tablist">  <!-- Barra de navegación role="tablist" mejora accesibilidad (indica que es una lista de pestañas) -->
+            <button class="tab-btn" role="tab">   
                 <span class="nav-tab-text">Conjunto de números</span>
             </button>
-            <button class="tab-btn" role="tab">
-                <span class="nav-tab-text">Operaciones Aritméticas</span>
+            <button class="tab-btn" role="tab">  <!-- Botón que actúa como pestaña role="tab" indica que es una pestaña interactiva -->
+                <span class="nav-tab-text">Operaciones Aritméticas</span> <!-- Texto visible del botón -->
             </button>
             <button class="tab-btn" role="tab">
                 <span class="nav-tab-text">:D</span>
             </button>
         </nav>
 
-        <section id="panel-clasificar" class="tab-panel active">
+        <section id="panel-clasificar" class="tab-panel active">     <!-- Sección que contiene el panel activo.
+                 id="panel-clasificar" permite manipularlo con JS.
+                 class="active" indica que está visible -->
             
-            <div class="card">
-                <div class="card-header">
-                    <h2>Clasificador de Conjunto de Números</h2>
+            <div class="card">  <!-- Tarjeta contenedora del clasificador -->
+                <div class="card-header">   <!-- Encabezado de la tarjeta --> 
+                    <h2>Clasificador de Conjunto de Números</h2>    <!-- Título principal del módulo -->
                     <p>Ingresa un número y selecciona un conjunto para verificar si pertenece a él.</p>
                 </div>
 
-                <div class="card-body">
-                    <div class="card-object">
-                        <label for="numero-input">Inserte el Número:</label>
-                        <input type="text" id="numero-input" placeholder="Ej: 1, -8, 3/4, 7.6">
+                <div class="card-body">   <!-- Cuerpo de la tarjeta donde están los controles -->
+                    <div class="card-object">    <!-- Contenedor individual de cada campo -->
+                        <label>Inserte el Número:</label>  <!-- Etiqueta descriptiva del input -->
+                        <input type="text" id="numero-input" placeholder="Ej: 1, -8, 3/4, 7.6">  <!-- Campo de texto para ingresar el número.
+                             id permite capturarlo con JavaScript.
+                             placeholder muestra ejemplo dentro del input -->
                     </div>
 
-                    <div class="card-object">
-                        <select id="select-conjuntos">
-                            <option value="">Selecciona un conjunto</option>
+                    <div class="card-object">     <!-- Contenedor del selector -->
+                        <select id="select-conjuntos">     <!-- Lista desplegable para elegir el conjunto numérico -->
+                            <option value="">Selecciona un conjunto</option>  <!-- Opción por defecto (vacía) -->
                             <option value="naturales">Naturales (N)</option>
                             <option value="enteros">Enteros (Z)</option>
                             <option value="racionales">Racionales (Q)</option>
                         </select>
                     </div>
 
-                    <button class="tab-btn" id="btn-clasificador" type="button">
-                        Evaluar
-                    </button>
+                    <button class="tab-btn" id="btn-clasificador" type="button">Evaluar</button>  <!-- Botón que ejecutará la evaluación.
+                         type="button" evita que recargue la página. -->
                 </div>
             </div>
 
