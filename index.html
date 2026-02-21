@@ -1,53 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razonamiento Cuantitativo 1</title>
-    <meta name="description" content="Herramienta educativa para clasificar números en conjuntos (naturales, enteros y racionales) y resolver operaciones artmeticas con explicaiones paso a paso.">
+    <meta name="description" content="Herramienta educativa para clasificar números en conjuntos (naturales, enteros y racionales) y resolver operaciones aritméticas con explicaciones paso a paso.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="principal">
+
         <nav class="opciones-nav" role="tablist">
             <button class="tab-btn" role="tab">
                 <span class="nav-tab-text">Conjunto de números</span>
             </button>
             <button class="tab-btn" role="tab">
-                <span class="nav-tab-text">Operaciones Aritmeticas</span>
+                <span class="nav-tab-text">Operaciones Aritméticas</span>
             </button>
             <button class="tab-btn" role="tab">
-                <span class="nav-tab-text">:D </span>
+                <span class="nav-tab-text">:D</span>
             </button>
         </nav>
 
         <section id="panel-clasificar" class="tab-panel active">
             
-            <div> class="card">
+            <div class="card">
                 <div class="card-header">
-                    <h2>Clasificador de Conjunto de nÚmeros</h2>
-                    <P>Ingresa un número y selecciona un conjunto para verificar si pertenece a él</P>
+                    <h2>Clasificador de Conjunto de Números</h2>
+                    <p>Ingresa un número y selecciona un conjunto para verificar si pertenece a él.</p>
                 </div>
-           </div>
 
+                <div class="card-body">
+                    <div class="card-object">
+                        <label for="numero-input">Inserte el Número:</label>
+                        <input type="text" id="numero-input" placeholder="Ej: 1, -8, 3/4, 7.6">
+                    </div>
 
-            <div class="card-body">   
-                <div class="card-object">
-                    <label>Inserte el Número: </label>
-                <input type="text" id="numero input" placeholder="Ej: 1, -8, 3/4, 7.6">
+                    <div class="card-object">
+                        <select id="select-conjuntos">
+                            <option value="">Selecciona un conjunto</option>
+                            <option value="naturales">Naturales (N)</option>
+                            <option value="enteros">Enteros (Z)</option>
+                            <option value="racionales">Racionales (Q)</option>
+                        </select>
+                    </div>
+
+                    <button class="tab-btn" id="btn-clasificador" type="button">
+                        Evaluar
+                    </button>
                 </div>
             </div>
-            
-            <div class="card-object">
-                <select id="select conjuntos">
-                    <option value="">Selecciona un conjunto</option>
-                    <option value="naturales">Naturales(N)</option>
-                    <option value="enteros">Enteros(Z)</option>
-                    <option value="racionales">Racionales(Q)</option>
-                </select>
-            </div>
-            <button class="tab-btn" id="btn-clasificador" type="button">Evaluar</button">
-         </div>
-    </section>
+
+        </section>
+
+    </div>
 </body>
 </html>
